@@ -1,3 +1,5 @@
+// Naming everything
+
 let heightInput = document.querySelector(".centimeters");
 let weightInput = document.querySelector(".kilograms");
 let calculate = document.querySelector(".btn_calculate");
@@ -8,9 +10,11 @@ calculate.addEventListener("click", ()=>{
     
     let height = heightInput.value;
     let weight = weightInput.value;
-    let BMI = (weight/((height*height)/10000)).toFixed(2); 
+    let BMI = (weight/((height*height)/10000)).toFixed(2);    //equation fo bmi
     result.innerText = BMI;
 
+
+// Conditions
     if(BMI < 18.5){
         answer.innerText = "You are Underweight"; result.style.color = "orange"; answer.style.color = "orange"; 
     }
@@ -29,7 +33,7 @@ calculate.addEventListener("click", ()=>{
 });
 
 
-
+// Clear every variable/value
 document.querySelector(".btn").
 addEventListener("click", ()=>{
     let remove = heightInput.value; weightInput;
